@@ -12,7 +12,7 @@ import io.seata.rm.tcc.api.TwoPhaseBusinessAction;
 @LocalTCC
 public interface AccountTCCService {
 
-    @TwoPhaseBusinessAction(name = "deduct", commitMethod = "confirm", rollbackMethod = "cancel")
+    @TwoPhaseBusinessAction(name = "deduct", commitMethod = "confirm", rollbackMethod = "cancel", useTCCFence = true)
     void deduct(@BusinessActionContextParameter(paramName = "userId") String userId,
                 @BusinessActionContextParameter(paramName = "money") Integer money);
 
