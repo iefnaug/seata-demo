@@ -44,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
             log.error("下单失败，原因:{}", e.contentUTF8(), e);
             throw new RuntimeException(e.contentUTF8(), e);
         }
-        System.out.println(1/0);
+//        System.out.println(1/0);
         return order.getId();
     }
 }

@@ -9,7 +9,7 @@ import io.seata.rm.tcc.api.TwoPhaseBusinessAction;
  * @author GF
  * @since 2023/5/18
  */
-@LocalTCC
+//@LocalTCC
 public interface AccountTCCService {
 
     @TwoPhaseBusinessAction(name = "deduct", commitMethod = "confirm", rollbackMethod = "cancel", useTCCFence = true)
